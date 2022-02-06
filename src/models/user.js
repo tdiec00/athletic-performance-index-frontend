@@ -1,6 +1,7 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose from "mongoose"
+const Schema = mongoose.Schema
 
-const Tricep = new Schema(
+const User = new Schema(
   {
     firstname: {type: String, required: true, trim: true},
     lastname: {type: String, required: true, trim: true},
@@ -9,6 +10,6 @@ const Tricep = new Schema(
     password_digest: {type: String, required: true, trim: true},
   },
   {timestamps: true}
-);
+)
 
-export default mongoose.model("tricep", Tricep);
+export default mongoose.model("user", User)

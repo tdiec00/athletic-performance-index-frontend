@@ -1,4 +1,3 @@
-import res from "express/lib/response"
 import Tracker from "../models/tracker.js"
 import errorHandler from "../utilities/error.js"
 
