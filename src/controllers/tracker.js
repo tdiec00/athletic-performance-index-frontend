@@ -1,7 +1,8 @@
 import Tracker from "../models/tracker.js"
+import Exercise from "../models/exercise.js"
 import errorHandler from "../utilities/error.js"
 
-export const createTracker = async (req, req) => {
+export const createTracker = async (req, res) => {
   try {
     const tracker = new Tracker(req.body)
     await tracker.save()
@@ -9,6 +10,12 @@ export const createTracker = async (req, req) => {
   } catch (error) {
     return res.json(errorHandler(true, "Error creating Tracker"))
   }
+}
+
+export const addToTracker = async (req, res) => {
+  try {
+    const exercise = Exercise.find
+  } catch (error) {}
 }
 
 export const updateTracker = async (req, res) => {
